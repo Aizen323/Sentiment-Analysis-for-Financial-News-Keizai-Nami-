@@ -1,0 +1,178 @@
+/* Updated style.css for dark theme */
+
+/* Set dark background for the entire page */
+body, .stApp {
+    background-color: #121212;
+    color: white;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+}
+
+/* Remove Streamlit default padding & margin */
+.main .block-container {
+    padding-top: 10px !important;
+    margin-top: -60px !important;
+}
+
+/* Hide Streamlit header */
+header {
+    visibility: hidden;
+    height: 0px;
+}
+
+/* Dark theme for sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #1E1E1E !important;
+    padding: 20px !important;
+    border-right: 1px solid #444 !important;
+    border-radius: 10px !important;
+}
+
+/* Sidebar labels */
+label {
+    color: #FFFFFF !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    margin-bottom: 5px !important;
+}
+
+/* Sidebar input fields */
+.stTextInput > div > div > input {
+    background-color: #262626 !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+    border-radius: 8px !important;
+    padding: 12px !important;
+    font-size: 16px !important;
+}
+
+/* Sidebar Input Glow Effect */
+.stTextInput > div > div > input:focus {
+    border-color: #4CAF50 !important;
+    box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.8);
+}
+
+/* Sidebar Placeholder Text */
+.stTextInput > div > div > input::placeholder {
+    color: #DDDDDD !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+}
+
+/* Customize tabs */
+.stTabs [data-baseweb="tab-list"] {
+    background-color: #1E1E1E !important;
+}
+.stTabs [data-baseweb="tab"] {
+    color: white !important;
+    font-weight: bold !important;
+}
+
+/* Ensure tables match dark theme */
+div[data-testid="stDataFrame"] {
+    background-color: #1A1A1A !important;  /* Darker background */
+    color: white !important;
+    border-radius: 10px !important;
+    border: 1px solid #444 !important;
+    padding: 10px !important;
+    text-align: center !important;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Table headers */
+div[data-testid="stDataFrame"] table {
+    background-color: #222 !important;
+    color: white !important;
+    border-collapse: collapse !important;
+}
+
+/* Table header cells */
+div[data-testid="stDataFrame"] th {
+    background-color: #2A2A2A !important;
+    color: #4CAF50 !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    padding: 14px !important;
+    border-bottom: 2px solid #4CAF50 !important;
+}
+
+/* Table cells */
+div[data-testid="stDataFrame"] td {
+    background-color: #1E1E1E !important;
+    color: #DDDDDD !important;
+    border: 1px solid #555 !important;
+    padding: 12px !important;
+    text-align: center !important;
+    font-size: 14px !important;
+}
+
+/* Highlight rows on hover */
+div[data-testid="stDataFrame"] tr:hover {
+    background-color: #333 !important;
+    transition: 0.3s ease-in-out;
+}
+
+/* Style scrollbar inside table */
+div[data-testid="stDataFrame"]::-webkit-scrollbar {
+    width: 8px !important;
+    background-color: #1E1E1E !important;
+}
+
+div[data-testid="stDataFrame"]::-webkit-scrollbar-thumb {
+    background-color: #4CAF50 !important;
+    border-radius: 10px !important;
+}
+
+/* Improved Button Styling */
+.stButton > button {
+    background-color: #333 !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+    border-radius: 8px !important;
+    padding: 12px 18px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    transition: 0.3s ease-in-out;
+    text-align: center !important;
+    display: block;
+    margin: auto;
+}
+
+/* Button hover effect */
+.stButton > button:hover {
+    background-color: #4CAF50 !important;
+    color: black !important;
+    border: 1px solid #4CAF50 !important;
+    box-shadow: 0px 4px 10px rgba(76, 175, 80, 0.4);
+}
+
+/* Ensure button text is visible */
+.stButton > button:focus {
+    color: white !important;
+}
+
+/* Plotly Chart Styling */
+div[data-testid="stPlotlyChart"] {
+    background-color: #121212 !important;
+    border-radius: 8px !important;
+    padding: 10px !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .stButton > button {
+        font-size: 14px !important;
+        padding: 10px 14px !important;
+    }
+
+    div[data-testid="stDataFrame"] td {
+        font-size: 13px !important;
+        padding: 8px !important;
+    }
+
+    div[data-testid="stDataFrame"] th {
+        font-size: 14px !important;
+        padding: 10px !important;
+    }
+}
